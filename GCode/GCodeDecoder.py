@@ -1,7 +1,7 @@
 from antlr4 import *
-from GCodeLexer import GCodeLexer
-from GCodeParser import GCodeParser
-from GCodeListener import GCodeListener
+from GCode.GCodeLexer import GCodeLexer
+from GCode.GCodeParser import GCodeParser
+from GCode.GCodeListener import GCodeListener
 import numpy as np
 
 class WalkListener(GCodeListener):

@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from GCodeDecoder import parsing
+from GCode.GCodeDecoder import parsing
 import numpy as np
 import time
 
@@ -189,7 +189,7 @@ class MechanicalLegInterface:
             ponto = Point2D(int(self.coords[self.N][0]), int(self.coords[self.N][1]))
             self.move_leg(trajectory_2_simulator(ponto))
             self.N = self.get_N()
-            self.master.after(1000, self.process_trajectory_point)  # Delay of 100ms
+            self.master.after(75, self.process_trajectory_point)  # Delay of 100ms
         else:
             self.command_text.configure(text="Trajectory complete or stopped")
 
@@ -232,7 +232,7 @@ class MechanicalLegInterface:
         return self.N + 1
 
 def main():
-    filename="./GCode-example"
+    filename="./GCode/G_trajetoria"
     coordinates=parsing(filename)
     root = ctk.CTk()
     root.title("Mechanical Leg Control Interface")
