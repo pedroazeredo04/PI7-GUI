@@ -17,6 +17,6 @@ pip3 install customtkinter
 
 A interface é composta de um desenho, à direita, que corresponde à perna mecânica de um robô. À esquerda, há um conjunto de botões que permitem controlar a posição dessa perna na prática.
 
-![alt text](assets/image.png)
+![alt text](./assets/image.png)
 
 No momento, os comandos não estão integrados com o comando real do robô. Apenas a interface foi implementada, com os prints no terminal correspondentes a cada botão pressionado.
